@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    z-index: 1111;
+}
+
+.Nav-Bar {
+    width: 100%;
+    height: 70px;
+    background-color: #364037;
+    z-index: 1111;
+}
+
+.Nav-logo-div {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 70px;
+}
+
+.Nav-logo {
+    display: inline-block;
+    width: 120px !important;
+}
+
+.Nav-ul {
+    float: right;
+    margin-right: 20px;
+    font-family: var(--poppins);
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.Nav-li {
+    list-style: none;
+
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+    font-family: var(--poppins);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.Nav-a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.HamBurger {
+    display: none;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.Nav-Bar-Line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: wheat;
+    ;
+}
+
+@media (max-width:995px) {
+
+    .Nav-a {
+        text-decoration: none;
+        color: wheat;
+        font-size: 16px;
+        padding: 5px 5px;
+    }
+
+    .Nav-li {
+        list-style: none;
+
+        display: inline-block;
+        line-height: 70px;
+        margin: 0 3px;
+
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .Nav-logo-div {
+        float: left;
+        width: 150px;
+        /* height: 70px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Nav-logo {
+        display: inline-block;
+        width: 10px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .h-tags {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: var(--poppins);
+    }
+
+    .Nav-logo-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        /* width: 350px; */
+        height: 70px;
+    }
+
+    .Nav-logo {
+        display: inline;
+        width: 250px;
+    }
+
+    .HamBurger {
+        display: block;
+    }
+
+    .HamBurger.Active .Nav-Bar-Line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .HamBurger.Active .Nav-Bar-Line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .HamBurger.Active .Nav-Bar-Line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .Nav-ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: black;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .Nav-li {
+        list-style: none;
+
+        display: block;
+        line-height: 30px;
+        margin: 50px 0;
+        padding: 0;
+
+        font-family: var(--poppins);
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .Nav-a {
+        text-decoration: none;
+        color: (0, 102, 228);
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+
+    .Nav-ul,
+    .Nav-a:hover {
+        color: var(--secondary-color);
+        font-size: 24px;
+    }
+
+    .Nav-ul.Active {
+        position: fixed;
+        z-index: 11111;
+        width: 100%;
+        height: 100vh;
+        background-color: #364037;
+        color: var(--secondary-color);
+        top: 70px;
+        left: 0;
+        text-align: center;
+        transition: all .5s;
+    }
+
+}
+
+/* =============================================== */
+.logo_1 {
+    width: 250px;
+    margin-left: 150px;
+    border: none;
+}
+
+/* ================= main-1 ========================== */
+.super_main {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/bg_img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ====================================================== */
+.profile {
+    background-color: #9A734F;
+    color: white;
+    width: 200px;
+    height: 290px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 000;
+}
+
+.profile_pic {
+    width: 180px;
+    border-radius: 50%;
+}
+/* ============================================== */
+.social{
+    background-color: #9A734F;
+    color: white;
+    width: 55px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 350px;
+    right: 0;
+}
+
+
+i{
+    font-size: 23px;
+    color: white;
+}
+/* ================================================ */
+#munnar_card{
+    width: 450px;
+    margin-left: 35%;
+    border-radius: 3px;
+    border: solid 2px  #9A734F;
+    color: wheat;
+    box-shadow: 3px 3px 7px black;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+#munnar_card:hover{
+    border:solid 2px wheat ;
+
+}
+#munnar_card:active{
+    opacity: 0.7;
+
+}
